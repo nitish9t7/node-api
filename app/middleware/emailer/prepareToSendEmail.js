@@ -17,6 +17,7 @@ const prepareToSendEmail = (user = {}, subject = '', htmlMessage = '') => {
     subject,
     htmlMessage
   }
+  // if (process.env.NODE_ENV === 'development') {
   if (process.env.NODE_ENV === 'production') {
     sendEmail(data, (messageSent) =>
       messageSent

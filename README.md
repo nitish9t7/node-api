@@ -57,7 +57,7 @@ Running demo is here:
 
 ### Using Git (recommended)
 
-1.  Clone the project from github. Change "myproject" to your project name.
+1.  Clone the project from github. Change "mnregaapp" to your project name.
 
 ```bash
 git clone https://github.com/nitish9t7/node-api.git ./node-api
@@ -71,7 +71,7 @@ git clone https://github.com/nitish9t7/node-api.git ./node-api
 ### Install npm dependencies after installing (Git or manual download)
 
 ```bash
-cd myproject
+cd mnregaapp
 npm install
 npm update
 ```

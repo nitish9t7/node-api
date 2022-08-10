@@ -1,16 +1,12 @@
 const mongoose = require("mongoose");
 
 const employeeSchema = new mongoose.Schema({
-  name:{
+  panchayatSuperviserId:{
     type:String,
     default:null,
     required:true
   },
-  fName:{
-    type:String,
-    default:null
-  },
-  mName:{
+  name:{
     type:String,
     default:null,
     required:true
@@ -21,10 +17,10 @@ const employeeSchema = new mongoose.Schema({
     required:true,
     unique:true
   },
-  address:{
+  fullAddress:{
     type:String,
     default:null,
-    required:true
+    reequired:true
   },
   aadhar:{
     type:Number,
@@ -38,7 +34,6 @@ const employeeSchema = new mongoose.Schema({
     required:true,
     unique:true
   },
-  
   emailId:{
     type:String,
     default:null,

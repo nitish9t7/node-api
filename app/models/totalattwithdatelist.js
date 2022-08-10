@@ -6,7 +6,7 @@ const totalattwithdatelist = new mongoose.Schema({
     default:null,
     required:true
   },
-  totalPres:{
+  presentIds:{
     type:String,
     default:null
   },

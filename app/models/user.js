@@ -49,7 +49,6 @@ const UserSchema = new mongoose.Schema(
         message: 'EMAIL_IS_NOT_VALID'
       }
     },
-
     password: {
       type: String,
       required: true,
@@ -76,7 +75,15 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
       select: false
-    }
+    },
+    learningPhotos: {
+      type: 
+    },
+    registrationStatus: {
+      type: Boolean
+      
+    },
+
   }
  
 )

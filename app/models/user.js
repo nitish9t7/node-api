@@ -5,20 +5,51 @@ const mongoosePaginate = require('mongoose-paginate-v2')
 
 const UserSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true
+    firstName:{
+      type:String,
+      default:null,
+      required:true
+    },
+    middleName:{
+      type:String,
+      default:null
+    },
+    lastName:{
+      type:String,
+      default:null,
+      required:true
+    },
+    empId:{
+      type:String,
+      default:null,
+      required:true,
+      unique:true
+    },
+    doB:{
+      type:String,
+      default:null,
+      required:true
+    },
+    aadharNumber:{
+      type:String,
+      default:null,
+      required:true,
+      unique:true
+    },
+    phone: {
+      type: String
+    },
+    city: {
+        type: String
     },
     email: {
       type: String,
       validate: {
         validator: validator.isEmail,
         message: 'EMAIL_IS_NOT_VALID'
-      },
-      lowercase: true,
-      unique: true,
-      required: true
+      }
     },
+
     password: {
       type: String,
       required: true,
@@ -36,35 +67,6 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false
     },
-    phone: {
-      type: String
-    },
-    city: {
-      type: String
-    },
-    country: {
-      type: String
-    },
-    urlTwitter: {
-      type: String,
-      validate: {
-        validator(v) {
-          return v === '' ? true : validator.isURL(v)
-        },
-        message: 'NOT_A_VALID_URL'
-      },
-      lowercase: true
-    },
-    urlGitHub: {
-      type: String,
-      validate: {
-        validator(v) {
-          return v === '' ? true : validator.isURL(v)
-        },
-        message: 'NOT_A_VALID_URL'
-      },
-      lowercase: true
-    },
     loginAttempts: {
       type: Number,
       default: 0,
@@ -75,11 +77,8 @@ const UserSchema = new mongoose.Schema(
       default: Date.now,
       select: false
     }
-  },
-  {
-    versionKey: false,
-    timestamps: true
   }
+ 
 )
 
 const hash = (user, salt, next) => {

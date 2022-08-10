@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const datewiseatt = new mongoose.Schema({
-  eId:{
+  empId:{
     type:String,
     default:null,
     required:true

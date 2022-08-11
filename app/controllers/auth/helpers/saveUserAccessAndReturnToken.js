@@ -29,6 +29,7 @@ const saveUserAccessAndReturnToken = (req = {}, user = {}) => {
         const userInfo = await setUserInfo(user)
         // Returns data with access token
         resolve({
+          status: 'SUCCESS',
           token: generateToken(user._id),
           user: userInfo
         })

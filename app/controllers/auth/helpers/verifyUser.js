@@ -12,6 +12,7 @@ const verifyUser = (user = {}) => {
         return reject(buildErrObject(422, err.message))
       }
       resolve({
+        status: 'SUCCESS',
         email: item.email,
         verified: item.verified
       })

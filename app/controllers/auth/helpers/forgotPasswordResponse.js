@@ -9,6 +9,7 @@ const forgotPasswordResponse = ({ email = '', verification = '' }) => {
   }
   if (process.env.NODE_ENV !== 'production') {
     data = {
+      status: 'SUCCESS',
       ...data,
       verification
     }

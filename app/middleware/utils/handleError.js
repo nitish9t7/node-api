@@ -10,6 +10,7 @@ const handleError = (res = {}, err = {}) => {
   }
   // Sends error to user
   res.status(err.code).json({
+    status: 'FAILED',
     errors: {
       msg: err.message
     }

@@ -14,6 +14,7 @@ const returnRegisterToken = (
       userInfo.verification = verification
     }
     const data = {
+      status: 'SUCCESS',
       token: generateToken(_id),
       user: userInfo
     }
